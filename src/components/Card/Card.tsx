@@ -1,13 +1,8 @@
 import React from 'react'
-import Title from '../Title/Title'
 import './Card.css'
 
-const Card = ({ title, url }: any) => {
-  return (
-    <div className='Card'>
-      <Title title={title} url={url} />
-    </div>
-  )
+const Card = ({ children }: any) => {
+  return <div className={'Card'}>{children}</div>
 }
 
 export default Card

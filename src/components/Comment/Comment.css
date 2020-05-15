@@ -1,0 +1,15 @@
+.Comment {
+  background-color: #f0f0f0;
+  border-radius: 8;
+  padding: 20px;
+  margin-bottom: 10px;
+  font-size: 14px !important;
+  color: #222222;
+}
+
+.Comment p {
+  font-size: 14px !important;
+  color: #222222;
+  padding: 0;
+  margin-bottom: 10px;
+}
