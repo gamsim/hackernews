@@ -5,9 +5,12 @@ function createMarkup(text: any) {
   return { __html: text }
 }
 
-const Comment = ({ text }: any) => {
+const Comment = ({ text, by }: any) => {
   return (
-    <div className='Comment' dangerouslySetInnerHTML={createMarkup(text)} />
+    <div className='Comment'>
+      <div dangerouslySetInnerHTML={createMarkup(text)}></div>
+      <p>By {by}</p>
+    </div>
   )
 }
 

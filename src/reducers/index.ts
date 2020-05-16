@@ -5,37 +5,12 @@ export const GET_TOP_COMMENTS_FAIL = 'GET_TOP_COMMENTS_FAIL'
 
 const API_ORIGIN = 'https://hacker-news.firebaseio.com'
 
-const asJson = (r: any) => r.json()
-
-const fetchWithTimeout = (url: string) => {
-  return Promise.race([
-    fetch(url),
-    new Promise((_, reject) =>
-      setTimeout(() => reject(new Error('timeout')), 30000)
-    ),
-  ])
-}
-
-const fetchItem = (item: any) =>
-  fetchWithTimeout(`${API_ORIGIN}/v0/item/${item}.json`).then(asJson)
-
-const fetchTopStories = () => {
-  return fetchWithTimeout(
-    `${API_ORIGIN}/v0/topstories.json?&orderBy="$key"&limitToFirst=10`
-  )
-    .then(asJson)
-    .then((items) => Promise.all(items.map((item: any) => fetchItem(item))))
-}
-
-const fetchTopComments = () => {
-  return fetchTopStories().then((items: any) => {
-    const commentIds = items.map((item: any) => item.kids.slice(0, 2)).flat()
-    return Promise.all(commentIds.map((item: any) => fetchItem(item)))
-  })
-}
-
 export default function reducer(
-  state = { errors: [], topStories: [] },
+  state = {
+    errors: [],
+    topStories: [],
+    topComments: [],
+  },
   action: any
 ) {
   switch (action.type) {
@@ -56,6 +31,37 @@ export default function reducer(
     default:
       return state
   }
+}
+
+const asJson = (r: any) => r.json()
+
+const fetchWithTimeout = (url: string) => {
+  return Promise.race([
+    fetch(url),
+    new Promise((_, reject) =>
+      setTimeout(() => reject(new Error('timeout')), 30000)
+    ),
+  ])
+}
+
+const fetchItem = (item: any) =>
+  fetchWithTimeout(`${API_ORIGIN}/v0/item/${item}.json?print=pretty`).then(
+    asJson
+  )
+
+const fetchTopStories = () => {
+  return fetchWithTimeout(`${API_ORIGIN}/v0/topstories.json?print=pretty`)
+    .then(asJson)
+    .then((items) =>
+      Promise.all(items.slice(0, 10).map((item: any) => fetchItem(item)))
+    )
+}
+
+const fetchTopComments = () => {
+  return fetchTopStories().then((items: any) => {
+    const commentIds = items.map((item: any) => item.kids.slice(0, 2)).flat()
+    return Promise.all(commentIds.map((item: any) => fetchItem(item)))
+  })
 }
 
 function getTopStoriesSuccess(topStories: any) {
@@ -89,12 +95,7 @@ function getTopCommentsFail(error: any) {
 export function getTopStories() {
   return function(dispatch: any) {
     return fetchTopStories().then(
-      (topStories) =>
-        dispatch(
-          getTopStoriesSuccess(
-            topStories.sort((a: any, b: any) => b.score - a.score)
-          )
-        ),
+      (topStories) => dispatch(getTopStoriesSuccess(topStories)),
       (error) => dispatch(getTopStoriesFail(error))
     )
   }

@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`My connected React-Redux component should render comments page with default state from Redux store 1`] = `
+<div>
+  <div
+    class="Page"
+  >
+    <header
+      class="Header"
+    >
+      <img
+        alt="Logo"
+        src="Y_Combinator_logo.svg"
+      />
+      <h1>
+        Hacker News
+      </h1>
+      <div
+        class="Header-nav"
+      >
+        <a
+          href="/"
+        >
+          Home
+        </a>
+        <a
+          href="/comments"
+        >
+          Comments
+        </a>
+      </div>
+    </header>
+    <article
+      class="Page-body"
+    >
+      <section>
+        <h2>
+          Top Comments
+        </h2>
+        <p>
+          Loading...
+        </p>
+      </section>
+    </article>
+  </div>
+</div>
+`;
+
+exports[`My connected React-Redux component should render comments page with top comments 1`] = `
+<div>
+  <div
+    class="Page"
+  >
+    <header
+      class="Header"
+    >
+      <img
+        alt="Logo"
+        src="Y_Combinator_logo.svg"
+      />
+      <h1>
+        Hacker News
+      </h1>
+      <div
+        class="Header-nav"
+      >
+        <a
+          href="/"
+        >
+          Home
+        </a>
+        <a
+          href="/comments"
+        >
+          Comments
+        </a>
+      </div>
+    </header>
+    <article
+      class="Page-body"
+    >
+      <section>
+        <h2>
+          Top Comments
+        </h2>
+        <div
+          class="Comment"
+        >
+          <div>
+            Test 1
+          </div>
+          <p>
+            By 
+            test1
+          </p>
+        </div>
+      </section>
+    </article>
+  </div>
+</div>
+`;

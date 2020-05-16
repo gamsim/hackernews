@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`My connected React-Redux component should render home page with default state from Redux store 1`] = `
+<div>
+  <div
+    class="Page"
+  >
+    <header
+      class="Header"
+    >
+      <img
+        alt="Logo"
+        src="Y_Combinator_logo.svg"
+      />
+      <h1>
+        Hacker News
+      </h1>
+      <div
+        class="Header-nav"
+      >
+        <a
+          href="/"
+        >
+          Home
+        </a>
+        <a
+          href="/comments"
+        >
+          Comments
+        </a>
+      </div>
+    </header>
+    <article
+      class="Page-body"
+    >
+      <section>
+        <h2>
+          Top Stories
+        </h2>
+        <p>
+          Loading...
+        </p>
+      </section>
+    </article>
+  </div>
+</div>
+`;
+
+exports[`My connected React-Redux component should render home page with top stories 1`] = `
+<div>
+  <div
+    class="Page"
+  >
+    <header
+      class="Header"
+    >
+      <img
+        alt="Logo"
+        src="Y_Combinator_logo.svg"
+      />
+      <h1>
+        Hacker News
+      </h1>
+      <div
+        class="Header-nav"
+      >
+        <a
+          href="/"
+        >
+          Home
+        </a>
+        <a
+          href="/comments"
+        >
+          Comments
+        </a>
+      </div>
+    </header>
+    <article
+      class="Page-body"
+    >
+      <section>
+        <h2>
+          Top Stories
+        </h2>
+        <div
+          class="Title"
+        >
+          <a
+            class="Title-link"
+            href="http://www.test.com"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Test 1
+          </a>
+          <br />
+          <span>
+            Score - 1, By test1
+          </span>
+        </div>
+      </section>
+    </article>
+  </div>
+</div>
+`;

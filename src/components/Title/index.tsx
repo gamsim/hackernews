@@ -1,7 +1,7 @@
 import React from 'react'
 import './Title.css'
 
-const Title = ({ score, title, url }: any) => {
+const Title = ({ score, title, url, by, time }: any) => {
   return (
     <div className='Title'>
       <a
@@ -10,8 +10,10 @@ const Title = ({ score, title, url }: any) => {
         target='_blank'
         rel='noopener noreferrer'
       >
-        {title} {score && `(Score - ${score})`}
+        {title}
       </a>
+      <br />
+      <span>{score && `Score - ${score}, By ${by}`}</span>
     </div>
   )
 }

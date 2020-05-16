@@ -6,7 +6,8 @@ import { Provider } from 'react-redux'
 import thunk from 'redux-thunk'
 
 import reducer from './reducers'
-import Home from './screens/Home'
+import Home from './screens/Home/Home'
+import Comments from './screens/Comments/Comments'
 
 const store = createStore(reducer, applyMiddleware(thunk))
 
@@ -17,6 +18,9 @@ function App() {
         <Switch>
           <Route exact path='/'>
             <Home />
+          </Route>
+          <Route exact path='/comments'>
+            <Comments />
           </Route>
         </Switch>
       </Router>
