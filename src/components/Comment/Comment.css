@@ -1,15 +1,16 @@
 .Comment {
   background-color: #f0f0f0;
   border-radius: 8px;
-  padding: 20px 40px 20px 40px;
+  padding: 20px;
   margin-bottom: 20px;
-  font-size: 16px;
+  font-size: 14px;
   font-style: italic;
   color: #222222;
 }
 
-.Comment * {
-  font-size: 16px;
+.Comment div,
+.Comment div p {
+  font-size: 14px;
   font-style: italic;
   color: #222222;
   padding: 0;
@@ -17,7 +18,7 @@
 }
 
 .Comment a {
-  font-size: 16px;
+  font-size: 14px;
   font-style: italic;
   color: #fb651e;
 }
