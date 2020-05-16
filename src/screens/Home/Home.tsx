@@ -2,8 +2,8 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 
 import './Home.css'
-import Title from '../../components/Title'
-import Header from '../../components/Header'
+import Title from '../../components/Title/Title'
+import Header from '../../components/Header/Header'
 
 import { useFetching } from '../../hooks/useFetching'
 import { getTopStories } from '../../reducers'

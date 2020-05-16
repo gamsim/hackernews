@@ -1,7 +1,7 @@
 import React from 'react'
 import './Title.css'
 
-const Title = ({ score, title, url, by, time }: any) => {
+const Title = ({ score, title, url, by }: any) => {
   return (
     <div className='Title'>
       <a

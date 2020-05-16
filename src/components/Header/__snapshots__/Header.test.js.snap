@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test header component should render header with no props 1`] = `
+<div>
+  <header
+    class="Header"
+  >
+    <img
+      alt="Logo"
+      src="Y_Combinator_logo.svg"
+    />
+    <h1>
+      Hacker News
+    </h1>
+    <div
+      class="Header-nav"
+    >
+      <a
+        href="/"
+      >
+        Home
+      </a>
+      <a
+        href="/comments"
+      >
+        Comments
+      </a>
+    </div>
+  </header>
+</div>
+`;

@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test comment component should render comment with no props 1`] = `
+<div>
+  <div
+    class="Comment"
+  >
+    <div />
+    <p>
+      By 
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Test comment component should render comment with props 1`] = `
+<div>
+  <div
+    class="Comment"
+  >
+    <div>
+      Test
+    </div>
+    <p>
+      By 
+      Simon Gamble
+    </p>
+  </div>
+</div>
+`;

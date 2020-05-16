@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test title component should render title with no props 1`] = `
+<div>
+  <div
+    class="Title"
+  >
+    <a
+      class="Title-link"
+      rel="noopener noreferrer"
+      target="_blank"
+    />
+    <br />
+    <span />
+  </div>
+</div>
+`;
+
+exports[`Test title component should render title with props 1`] = `
+<div>
+  <div
+    class="Title"
+  >
+    <a
+      class="Title-link"
+      href="http://www.test.com"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      Test
+    </a>
+    <br />
+    <span>
+      Score - 1, By Simon Gamble
+    </span>
+  </div>
+</div>
+`;

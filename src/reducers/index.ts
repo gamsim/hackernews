@@ -7,7 +7,6 @@ const API_ORIGIN = 'https://hacker-news.firebaseio.com'
 
 export default function reducer(
   state = {
-    errors: [],
     topStories: [],
     topComments: [],
   },
@@ -39,7 +38,7 @@ const fetchWithTimeout = (url: string) => {
   return Promise.race([
     fetch(url),
     new Promise((_, reject) =>
-      setTimeout(() => reject(new Error('timeout')), 30000)
+      setTimeout(() => reject(new Error('timeout')), 5000)
     ),
   ])
 }
