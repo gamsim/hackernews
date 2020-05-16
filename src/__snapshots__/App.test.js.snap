@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`My App component should render app without error  1`] = `
+<div>
+  <div
+    class="Page"
+  >
+    <header
+      class="Header"
+    >
+      <img
+        alt="Logo"
+        src="Y_Combinator_logo.svg"
+      />
+      <h1>
+        Hacker News
+      </h1>
+      <div
+        class="Header-nav"
+      >
+        <a
+          href="/"
+        >
+          Home
+        </a>
+        <a
+          href="/comments"
+        >
+          Comments
+        </a>
+      </div>
+    </header>
+    <article
+      class="Page-body"
+    >
+      <section>
+        <h2>
+          Top Stories
+        </h2>
+        <p>
+          Loading...
+        </p>
+      </section>
+    </article>
+  </div>
+</div>
+`;
