@@ -10,7 +10,7 @@ This project uses:
 Clone project
 ```
 git clone git@github.com:gamsim/hackernews.git
-cd elevator
+cd hackernews
 ```
 
 Open a terminal and cd to the root of the project and run:
